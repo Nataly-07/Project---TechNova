@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNOVA</title>
+    <link rel="stylesheet" href="estilos1.css">
+</head>
+<body>
+  <header class="header">
+  <div class="menu-icon">&#9776;</div>
+
+  <a href="index.html" class="logo">
+    <img src="imagenes/logo technova.png" alt="Logo">
+    <span>TECHNOVA</span>
+  </a>
+
+  <div class="search-bar">
+    <input type="text" placeholder="¿Qué estás buscando hoy?">
+    <button class="search-btn">&#128269;</button>
+  </div>
+
+  <div class="acciones-usuario">
+    <a href="iniciosesion.html" class="account">
+      <span>Iniciar Sesión</span>
+    </a>
+    <a href="creacioncuenta.html" class="account">
+      <span>Crear Cuenta</span>
+    </a>
+    <a href="404.html" class="cart">
+      <span class="cart-icon">&#128722;</span>
+      <span>Mi Carrito</span>
+    </a>
+  </div>
+</header>
+  <main class="login-box">
+        <h2>TECHNOVA</h2>
+        <H3>Crear Cuenta</H3>
+        <form>
+            <label for="name">Nombre Completo</label>
+            <input type="text" id="name" placeholder="Ingresa tu nombre"required/>
+
+            <label for="register-email">Correo Electronico</label>
+            <input type="email" id="register-email" placeholder="Ingresa tu correo" required/>
+
+            <label for="register-food">Telefono</label>
+            <input type="telefono" id="register-" placeholder="Ingresa tu telefono" required/>
+
+            <label for="register-">Ciudad</label>
+            <input type="ciudad" id="register-" placeholder="Ingresa tu ciudad" required/>
+
+            <label for="register-">Tipo de Documento</label>
+            <input type="tipo de documento" id="register-" placeholder="Ingresa tu tipo de identidad" required/>
+
+            <label for="register-">Numero</label>
+            <input type="numero" id="register-" placeholder="ingresa numero" required/>
+
+            <label for="register-password">Contraseña</label>
+            <input type="password" id="register-password" placeholder="Crea una contraseña" required/>
+
+            <label for="confirm-password">Confirmar Contraseña</label>
+            <input type="password" id="confirm-password" placeholder="Repite la contraseña" required/>
+
+            <Button type="submit" class="login-btn">Registrarse</Button>
+
+            <div class="google-login">
+            <img src=".//google_720255.png" alt="" />
+            <a href="https://workspace.google.com/intl/es-419/gmail/">Registrarse con Google</a>
+            </div>
+            <a href="index.html" >Crear Cuenta</a>
+            <a href="#" onclick="showLogin()" class="forgot">¿Ya tienes cuenta? Inicia sesión</a>
+        </form>
+  </main>
+
+    
+</body>
+</html>

@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #00cc44; /* Verde más suave */
+  padding: 10px 20px;
+  border-radius: 0 0 30px 30px;
+  border: 1px solid #5f5f5f;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  margin: 10px 20px;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #5f5f5f;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #00cc44;
+}
+
+.acciones-usuario {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.account, .cart {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, #66ff66, #33cc33);
+  padding: 8px 18px;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+  gap: 8px;
+  border: 1px solid #4b4b4b;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.account:hover, .cart:hover {
+  background: linear-gradient(to bottom, #55dd55, #2baa2b);
+  transform: scale(1.05);
+}
+
+.account span, .cart span {
+  font-size: 14px;
+}
+
+
+
+.login-box {
+  background-color: rgb(144, 241, 144);
+  width: 350px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 5px;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.login-box label {
+  text-align: left;
+  margin-top: 15px;
+  font-weight: bold;
+  background-color: rgb(105, 228, 105);
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  color: black;
+}
+
+.login-box input {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+.login-btn {
+  background-color: rgb(101, 224, 101);
+  color: black;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.google-login {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.google-login img {
+  width: 20px;
+  height: 20px;
+}
+
+.forgot {
+  margin-top: 15px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #007700;
+}

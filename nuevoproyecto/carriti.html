@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Technova</title>
+  <link rel="stylesheet" href="stilotech.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: #edf5ed;
+    }
+    .header {
+      background: #00cc44;
+      padding: 20px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .header .cart {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .products {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+      gap: 20px;
+    }
+    .products .item {
+      background: #ccffcc;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #5f5f5f;
+      text-align: center;
+    }
+    .products .item img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .products .item button {
+      background: #00cc44;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .products .item button:hover {
+      background: #007f33;
+      color: #fff;
+    }
+    .carrito {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100vh;
+      background: #e6ffe6;
+      border-left: 5px solid #00cc44;
+      box-shadow: -5px 0 10px rgb(0 0 0 / 0.5);
+      padding: 20px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 1000;
+      color: #007f33;
+    }
+    .carrito.active {
+      transform: translateX(0);
+    }
+    .carrito h2 {
+      color: #007f33;
+      margin-bottom: 20px;
+    }
+    .carrito ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    .carrito ul li {
+      background: #ccffcc;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #5f5f5f;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .carrito ul li img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+    .carrito ul li .item-info {
+      flex-grow: 1;
+    }
+    .carrito .total {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #007f33;
+    }
+    .carrito button {
+      background: #00cc44;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .carrito button:hover {
+      background: #007f33;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">Technova</a>
+    <span class="cart">🛒</span>
+  </header>
+
+  <section class="products">
+    <div class="item">
+      <img src="https://via.placeholder.com/100" alt="Producto 1">
+      <h3>Producto 1</h3>
+      <p>$100</p>
+      <button onclick='addToCart({ nombre: "Producto 1", precio: 100, imagen: "https://via.placeholder.com/100"})'>Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/100" alt="Producto 2">
+      <h3>Producto 2</h3>
+      <p>$200</p>
+      <button onclick='addToCart({ nombre: "Producto 2", precio: 200, imagen: "https://via.placeholder.com/100"})'>Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/100" alt="Producto 3">
+      <h3>Producto 3</h3>
+      <p>$300</p>
+      <button onclick='addToCart({ nombre: "Producto 3", precio: 300, imagen: "https://via.placeholder.com/100"})'>Agregar al Carrito</button>
+    </div>
+  </section>
+
+  <div id="carrito" class="carrito">
+    <h2>Mi Carrito</h2>
+    <ul id="itemsCarrito">
+      <!-- Los productos se insertarán aquí -->
+    </ul>
+    <div class="total">
+      <span>Total</span> <span id="totalCarrito">$0</span>
+    </div>
+    <button id="checkoutBtn">Finalizar compra</button>
+  </div>
+
+  <script>
+    // Carrito
+    const carrito = document.getElementById('carrito');
+    const itemsCarrito = document.getElementById('itemsCarrito');
+    const totalCarrito = document.getElementById('totalCarrito');
+    document.querySelector('.cart').addEventListener('click',(e)=>{
+      e.preventDefault();
+      carrito.classListToggle('active'); 
+      // <- typo aquí, corregido abajo
+    });
+
+    // CORRECCIÓN:
+    document.querySelector('.cart').addEventListener('click',(e)=>{
+      e.preventDefault();
+      carrito.classList.toggle('active'); 
+    });
+
+    let total = 0;
+
+    function addToCart(producto) {
+      total += producto.precio;
+
+      const item = document.createElement('li');
+      item.innerHTML = `
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+        <div class="item-info">
+          <span>${producto.nombre}</span> <br>
+          <strong>$${producto.precio.toLocaleString()}</strong>
+        </div>
+        <button onclick='eliminar(this, ${producto.precio})'>Quitar</button>
+      `;
+      itemsCarrito.appendChild(item);
+      totalCarrito.textContent = `$${total.toLocaleString()}`
+    }
+
+    function eliminar(el, precio) {
+      el.closest('li').remove();
+      total -= precio;
+      totalCarrito.textContent = `$${total.toLocaleString()}`
+    }
+
+    document.getElementById('checkoutBtn').addEventListener('click',(e)=>{
+      e.preventDefault();
+      alert("¡Compra finalizada!");
+      // Limpia el carrito
+      itemsCarrito.innerHTML = '';
+      total = 0;
+      totalCarrito.textContent = `$${total.toLocaleString()}`
+      carrito.classList.remove('active'); 
+    });
+
+
+  </script>
+
+</body>
+</html>
