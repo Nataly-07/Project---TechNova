@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="carrito.css">
+    <title>Carrito</title>
+</head>
+
+
+<body>
+    <h1>Carrito de compras</h1>
+
+    <ul id="lista-carrito">
+        <!-- Los productos aparecerán aquí -->
+    </ul>
+
+    <p>Total: $<span id="total">0</span></p>
+
+    <input id="direccion" type="text" placeholder="Ingrese dirección">
+    <input id="medio-pago" type="text" placeholder="Ingrese medio de pago">
+    <input id="fecha-entrega" type="date">
+    <br>
+    <button id="finalizar-compra">Finalizar compra</button>
+
+    <script src="script.js" defer></script>
+
+    <script>
+        document.querySelector("#finalizar-compra").addEventListener("click", () => {
+            const direccion = document.querySelector("#direccion").value.trim();
+            const medioPago = document.querySelector("#medio-pago").value.trim();
+            const fecha = document.querySelector("#fecha-entrega").value.trim();
+
+            if (direccion === '' ||
+                medioPago === '' ||
+                fecha === '') {
+                alert("Debe completar todos los campos.");
+                return;
+            }
+
+            if (localStorage.getItem("carrito") === '' ||
+                JSON.parse(localStorage.getItem("carrito")).length === 0) {
+                alert("El carrito está vacío.");
+                return;
+            }
+
+            // Limpia el carrito
+            localStorage.removeItem("carrito");
+
+            alert("¡Compra finalizada con éxito!");
+            window.location.href = "index.html";
+        });
+    </script>
+
+</body>
+</html>
+
+

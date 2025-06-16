@@ -8,7 +8,7 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #00cc44; /* Verde más suave */
+  background-color: #00cc44; 
   padding: 10px 20px;
   border-radius: 0 0 30px 30px;
   border: 1px solid #5f5f5f;
@@ -93,6 +93,7 @@ body {
 }
 
 
+
 /* lo mas vendido */
 
 .mas-vendido-container {
@@ -134,6 +135,7 @@ body {
     overflow-x: auto;
     padding: 10px 0;
     position: relative;
+    color: black;
 }
 
 
@@ -147,6 +149,7 @@ body {
     position: relative;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     border: 1px solid #5f5f5f;
+    color: #000;
 }
 
 
@@ -178,7 +181,7 @@ body {
 
 .descuento {
     background-color: #00cc00;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 12px;
     padding: 2px 6px;
     border-radius: 5px;
@@ -377,4 +380,120 @@ a {
     
 }
 
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-list, .brand-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-buttons {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.category-list span {
+  background-color: #fcfcfc;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #00cf1c;
+   box-shadow: 0 12px 30px 0 rgba(10, 226, 6, 0.37);
+}
+
+.brand-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.brand-list img {
+  height: 40px;
+  box-shadow: 0 12px 30px 0 rgba(10, 226, 6, 0.37);
+}
+
+/*carrito*/
+#carrito-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ccffcc;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #5f5f5f;
+  box-shadow: 0 0 12px rgb(0 0 0 / 0.5);
+  max-width: 250px;
+  z-index: 1000;
+  color: #000;
+}
+
+#carrito-float h2 {
+  color: #007f00;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#carrito-float ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+#carrito-float ul li {
+  background: #fff;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  border: 1px solid #5f5f5f;
+  box-shadow: 0 0 5px #00000033;
+  font-size: 16px;
+}
+
+#carrito-float p {
+  color: #007f00;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#irCarritoBtn {
+  display: block;
+  text-decoration: none;
+  background: #00cc44;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #5f5f5f;
+  box-shadow: 0 0 5px rgb(0 0 0 / 0.5);
+  transition: background 0.3s, transform 0.2s;
+}
+
+#irCarritoBtn:hover {
+  background: #009933;
+  transform: scale(1.05);
+}
+
+#irCarritoBtn:active {
+  transform: scale(0.95);
+}
 

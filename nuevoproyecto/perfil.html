@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TECHNOVA - Perfil</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@latest/css/boxicons.min.css'>
+  <link rel="stylesheet" href="estilodas.css">
+</head>
+<body>
+   <script src="app.js" defer></script>
+
+  <!-- HEADER SUPERIOR -->
+  <header class="header">
+    <div class="menu-icon">&#9776;</div>
+
+    <a href="index.html" class="logo">
+      <img src="imagenes/logo technova.png" alt="Logo">
+      <span>TECHNOVA</span>
+    </a>
+
+    <div class="search-bar">
+      <input type="text" placeholder="¿Qué estás buscando hoy?">
+      <button class="search-btn">&#128269;</button>
+    </div>
+
+    <div class="acciones-usuario account">
+      <a href="#" id="cerrar-sesion"><span>Cerrar sesión</span></a>
+    </div>
+    <div class="acciones-usuario account">
+      <a href="carrito.html" class="cart">
+      <span class="cart-icon">&#128722;</span>
+      <span>Mi Carrito</span>
+    </a>
+    </div>
+  </header>
+
+  <!-- LAYOUT PRINCIPAL -->
+  <div class="layout">
+    <!-- PANEL LATERAL -->
+    <div class="menu-dashboard">
+      <!-- TOP MENU -->
+      <div class="top-menu">
+        <div class="logo">
+          <img src="./imagenes/logo technova.png" alt=""> 
+          <span>Panel Cliente</span>
+        </div>
+        <div class="toggle">
+          <i class='bx bx-menu'></i>
+        </div>
+      </div>
+
+      <!-- INPUT SEARCH -->
+      <div class="input-search">
+        <i class='bx bx-search'></i>
+        <input type="text" class="input" placeholder="Buscar">
+      </div>
+
+      <!-- ENLACES MENÚ -->
+      <div class="menu">
+        <div class="enlace"><i class='bx bx-home'></i> <span>Inicio</span></div>
+        <div class="enlace"><i class='bx bx-user'></i> <span>Mi Perfil</span></div>
+        <div class="enlace"><i class='bx bx-heart'></i> <span>Favoritos</span></div>
+        <div class="enlace"><i class='bx bx-message'></i> <span>Mensajes</span></div>
+        <div class="enlace"><i class='bx bx-cart'></i> <span>Pedidos</span></div>
+        <div class="enlace"><i class='bx bx-credit-card'></i> <span>Medios De Pagos</span></div>
+        <div class="enlace"><i class='bx bx-shopping-bag'></i> <span>Mis Compras</span></div>
+        <div class="enlace"><i class='bx bx-cog'></i> <span>Configuración</span></div>
+        <div id="cerrar-menu" class="enlace"><i class='bx bx-log-out'></i> <span>Cerrar Sesión</span></div>
+      </div><!-- fin .menu -->
+    </div><!-- fin .menu-dashboard -->
+
+    <!-- PRINCIPAL -->
+    <main class="perfil">
+      <h1>Mi Perfil</h1>
+      <p>Usuario: <span id="email_usuario_perfil">Cargando...</span></p>
+    </main><!-- fin .perfil -->
+
+  </div><!-- fin .layout -->
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 TECHNOVA. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="perfil.js"></script>
+
+</body>
+</html>
