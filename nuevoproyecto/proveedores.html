@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Menu Dashboard</title>
+    <title>Proveedores</title>
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/chart.min.js"></script>
     <link rel="stylesheet" href="estilodas.css">
     <link rel="stylesheet" href="stilotech.css">
     <script src="app.js" defer></script>
@@ -25,7 +24,7 @@
     </div>
 
     <div class="acciones-usuario">
-      <a href="404.html" class="account"><i class='bx bx-user-circle'></i> <span>Perfil</span></a>
+      <a href="perfilad.html" class="account"><i class='bx bx-user-circle'></i> <span>Perfil</span></a>
       <a href="index.html" class="account"><i class='bx bx-log-out'></i> <span>Cerrar Sesion</span></a>
       <a href="error500.html" class="cart"><i class='bx bx-cog'></i> <span>Configuracion</span></a>
     </div>
@@ -54,55 +53,48 @@
       <div class="menu">
         <div class="enlace"><a href="perfilad.html"><i class='bx bx-user-circle'></i> Mi Perfil</a></div>
         <div class="enlace"><a href="usuarios.html"><i class='bx bx-user'></i> Usuarios</a></div>
-        <div class="enlace"><a href="dashboardad.html"><i class='bx bx-chart'></i> Estadisticas Pagina</a></div>
-          <div class="enlace"><a href="mensajes.html"><i class='bx bx-message'></i> Mensajes</a></div>
-            <div class="enlace"><a href="inventario.html"><i class='bx bx-shopping-bag'></i> Inventario</a></div>
-              <div class="enlace"><a href="pedidosad.html"><i class='bx bx-cart'></i>  Pedidos</a></div>
-              <div class="enlace"><a href="pagos.html"><i class='bx bx-credit-card'></i>  Pagos</a></div>
-              <div class="enlace"><a href="proveedores.html"><i class='bx bx-user-circle'></i>  Proveedores</a></div>
-              <div class="enlace"><a href="configuraciones.html"><i class='bx bx-cog'></i>  Configuraciones</a></div>
-              <div class="enlace"><a href="index.html"><i class='bx bx-log-out'></i>  Cerrar Sesion</a></div>
-       
+        <div class="enlace"><a href="dashboardad.html"><i class='bx bx-chart'></i> Estadisticas Página</a></div>
+        <div class="enlace"><a href="mensajes.html"><i class='bx bx-message'></i> Mensajes</a></div>
+        <div class="enlace"><a href="inventario.html"><i class='bx bx-shopping-bag'></i> Inventario</a></div>
+        <div class="enlace"><a href="pedidos.html"><i class='bx bx-cart'></i> Pedidos</a></div>
+        <div class="enlace"><a href="pagos.html"><i class='bx bx-credit-card'></i> Pagos</a></div>
+        <div class="enlace"><a href="proveedores.html"><i class='bx bx-user-circle'></i> Proveedores</a></div>
+        <div class="enlace"><a href="configuraciones.html"><i class='bx bx-cog'></i> Configuraciones</a></div>
+        <div class="enlace"><a href="index.html"><i class='bx bx-log-out'></i> Cerrar Sesion</a></div>
       </div>
-
     </div><!-- /.menu-dashboard -->
 
     <!-- PRINCIPAL -->
     <main class="main-content">
-      <h1> Dashboard</h1>
+      <h1>Proveedores</h1>
 
-      <div class="cards">
-        <div class="card">
-          <h3>Usuarios</h3>
-          <p>125</p>
-        </div>
-        <div class="card">
-          <h3>Productos</h3>
-          <p>54</p>
-        </div>
-        <div class="card">
-          <h3>Mensajes</h3>
-          <p>18</p>
-        </div>
-        <div class="card">
-          <h3>Valor en Ventas</h3>
-          <p>$12,000</p>
-        </div>
-      </div>
-
-      <h2>Informe de Ventas</h2>
-
-      <div class="chart">
-        <canvas id="ventasChart" width="400" height="200"></canvas>
-      </div>
-
-      <h2>Últimos mensajes</h2>
-
-      <ul class="messages-list">
-        <li>Juan Pérez: Consulta de producto</li>
-        <li>María Lopez: Queja en el pedido</li>
-        <li>Carlos Rivera: Necesito apoyo técnico</li>
-      </ul>
+      <table class="table-proveedores">
+        <thead>
+          <tr>
+            <th>ID Proveedor</th>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Valor deuda</th>
+            <th>Fecha última factura</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1001</td>
+            <td>Comtech</td>
+            <td>555-1234</td>
+            <td>$1,000,000</td>
+            <td>2025-06-10</td>
+          </tr>
+          <tr>
+            <td>1002</td>
+            <td>SoftWorld</td>
+            <td>555-5678</td>
+            <td>$500,000</td>
+            <td>2025-06-15</td>
+          </tr>
+        </tbody>
+      </table>
 
     </main><!-- /main-content -->
 

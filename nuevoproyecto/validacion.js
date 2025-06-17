@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Obtener los datos del formulario
+    
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
-    // Función para mostrar mensajes flotantes
+    
     function mostrarMsg(texto, tipo = "error") {
       const msgFlotante = document.getElementById("msg-flotante");
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 3000);
     }
 
-    // Validaciones
+    
     if (email === '' || password === '') {
       mostrarMsg("Todos los campos son obligatorios.", "error");
 
@@ -38,12 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
       mostrarMsg("La password debe tener al menos 6 dígitos.", "error");
 
     } else {
-      // Aquí iría la autenticación
+    
       localStorage.setItem("email_usuario", email);
       localStorage.setItem("password_usuario", password);
       mostrarMsg("Inicio de sesión exitoso.", "success");
 
-      // Limpia el formulario automáticamente
+      
       form.reset();
 
       setTimeout(() => {
