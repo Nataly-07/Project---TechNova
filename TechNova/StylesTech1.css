@@ -1,0 +1,477 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sansationn', sans-serif;
+}
+
+@font-face {
+    font-family: 'Sansationn';
+    src: url(Fuente/Sansationn/Sansation-Light.woff2);
+}
+
+/* Encabezado */
+header {
+    background-color: #00D307;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.Menu-logo {
+    margin: 5px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.Logo {
+    width: 45px;
+}
+
+.Tech {
+    font-family: 'Sansationn', sans-serif;
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Barra de búsqueda */
+.Barra-busqueda {
+    padding: 0;
+    position: relative;
+    max-width: 50%;
+    width: 100%;
+    float: right;
+    margin-right: 400px;
+}
+
+.Barra-busqueda input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.Barra-busqueda img {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Botones */
+.Mi-cuenta,
+.Mi-carrito {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 23px;
+}
+
+.Boton1,
+.Boton2 {
+    background-color: #00FF09;
+    border: none;
+    border-radius: 50px;
+    width: 120px;
+    height: 45px;
+    font-size: 14px;
+    padding-left: 65px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+}
+
+.Mi-cuenta img,
+.Mi-carrito img {
+    position: absolute;
+    left: 12px;
+    width: auto;
+    height: 33px;
+    pointer-events: none;
+}
+
+/* Contenedor principal */
+.Contenedor1 {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    margin: 0;
+    padding: 40px;
+    border: solid 1px rgba(0, 0, 0, 0.733);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+/* Caja interior */
+.Caja1 {
+    background-color: #CCFFCE;
+    padding: 20px;
+    border-radius: 25px;
+    width: 75%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Barra horizontal dentro de la caja */
+.Barra-ME {
+    background-color: white;
+    color: #000;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border: 0.3px solid #5e5e5e5d;
+}
+
+.item-ME,
+.item1-ME {
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.item1-ME {
+    margin-left: 20px;
+}
+
+.item-ME {
+    margin-right: 20px;
+}
+
+.item-Metodo-envio {
+    background-color: rgb(94, 224, 82);
+    border-radius: 50px;
+    padding: 10px;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #4CAF50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+/* Sub-Contenedor general */
+.Sub-Contenedor {
+    background-color: #ffffff;
+    color: #000;
+    width: 100%;
+    padding: 40px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #00000093;
+    box-sizing: border-box;
+}
+
+/* Fila para organizar Metodo-envio y Mi-Carrito */
+.Fila-Metodo-Carrito {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Caja Metodo-envio */
+.Metodo-envio {
+    background-color: #7AE97E;
+    border-radius: 30px;
+    padding: 20px;
+    width: 48%;
+    box-sizing: border-box;
+    border: 1px solid #00000080;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+/* Contenido interno de Metodo-envio */
+.Sub-ME {
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #00000091;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.Boton-ME {
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    background-color: #00D307;
+    color: #000;
+    padding: 5px 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.textos {
+    text-align: center;
+    width: 100%;
+    line-height: 1.3;
+}
+
+.Sub-ME h3,
+.Sub-ME h4,
+.Sub-ME p {
+    margin: 0.3px 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+/* Fechas y horas */
+.fechas-horas {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Sub cajas */
+.Sub-peque1-4,
+.Sub-peque2-5 {
+    background-color: #ABE3AD;
+    color: #000;
+    width: 90%;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    gap: 5px;
+}
+
+.Sub-peque1-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Sub-peque2-5 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Peque cajas */
+.Peque1, .Peque2, .Peque3, .Peque4 {
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 10px 5px;
+}
+
+.Peque1 {
+    background-color: #9affc1;
+}
+
+.Peque2, .Peque3, .Peque4 {
+    background-color: #fff;
+    border: 1px solid #0000009c;
+}
+
+.Peque3 { border-color: #0000006c; }
+.Peque4 { border-color: #00000077; }
+
+.Fecha-linea {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.Hora, .Hora1 {
+    background-color: #bde9bf;
+    color: #000;
+    padding: 5px 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Mi-Carrito */
+.Mi-Carrito {
+    background-color: #CCFFCE;
+    border-radius: 30px;
+    padding: 20px;
+    width: 48%;
+    box-sizing: border-box;
+    border: 1px solid #00000080;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Mi-Carrito .Total, 
+.Mi-Carrito .Descuentos {
+    background-color: #CCFFCE;
+    padding: 15px;
+    border-radius: 20px;
+    color: #000;
+    margin: 0;
+}
+
+.Mi-Carrito .Total p.Uno, 
+.Mi-Carrito .Descuentos p.Uno {
+    font-weight: bold;
+}
+
+.Mi-Carrito .Total p.Dos, 
+.Mi-Carrito .Descuentos p.Dos {
+    text-align: right;
+}
+
+.Mi-Carrito .Descuentos h2 {
+    margin: 0;
+}
+
+.Mi-Carrito .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Mi-Carrito .Uno {
+    text-align: left;
+    flex: 1;
+    color: #000;
+    margin: -1px;
+}
+
+.Mi-Carrito .Dos {
+    text-align: right;
+    flex: 1;
+    color: #00641B;
+    margin: 0;
+}
+
+.linea {
+    height: 1px;
+    background-color: #ccc;
+    margin: -15px 0;
+    width: 100%;
+}
+
+.Total-img {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.fila-totales {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-producto {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.imagen-caja {
+    width: 140px;
+    height: 140px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+}
+
+.imagen-caja img {
+    max-width: 130%;
+    max-height: 130%;
+    object-fit: cover;
+}
+
+.Derecha {
+    flex: 1;
+    margin: -5px;
+}
+
+.Derecha p {
+    margin: 2px 0;
+    line-height: 1.2;
+}
+
+.Editar {
+    margin-top: 6px;
+    list-style: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.Continuar {
+    background-color: #00D307;
+    color: #000000;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    display: block;
+    width: 90%;
+    margin: 10px auto 0;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Continuar:hover {
+    background-color: #00b506;
+}
+
+.Compra-Segura {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #00d307;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}

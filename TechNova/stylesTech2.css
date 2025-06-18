@@ -1,0 +1,741 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header  {
+    background-color: #00D307;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Sansationn', sans-serif;
+
+
+    
+    /* organiza, los tamaños ? */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+
+}
+
+.Menu-logo {
+    margin: 5px 20px;
+    
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.Logo {
+    width: 45px;
+}
+
+@font-face {
+    font-family: 'Sansationn';
+    src: url(Fuente/Sansationn/Sansation-Light.woff2);
+}
+body {
+    font-family: 'Sansationn', sans-serif;
+}
+
+.Tech {
+    font-family: 'Sansationn', sans-serif;
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* BArra de busqueda */
+.Barra-busqueda {
+    padding: 0px;
+    position: relative;
+    max-width: 50%;
+    width: 100%;
+    float: right;
+    margin-right: 400px;
+}
+
+.Barra-busqueda input{
+    width: 100%;
+    padding: 10px 40px 10px 15px; /* espacio a la derecha para la    lupa */
+    font-size: 16px;
+    /* border: 1px solid #000000; */
+    border: none;
+    border-radius: 25px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.Barra-busqueda img { 
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Botones */
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 0;              /* elimina espacios internos */
+  margin: 0;               /* elimina espacios externos */
+  height: auto;            /* altura automática según el contenido */
+  min-height: unset;  
+
+
+}
+
+/* Contenedores de botones */
+.Mi-cuenta,
+.Mi-carrito {
+  position: relative;  /* importante para que imagen absolute se posicione bien */
+  display: inline-flex; /* para alinear botón e imagen en línea */
+  align-items: center;
+  margin-left: 10px; /* separa los botones */
+    margin-right: 23px;
+}
+
+/* Botones */
+.Boton1,
+.Boton2 {
+  background-color: #00FF09;
+  border: none;
+  border-radius: 50px;
+  width: 120px;
+  height: 45px;
+  font-size: 14px;
+  padding-left: 65px; /* espacio para la imagen */
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Imagen dentro del contenedor, pegada a la izquierda */
+.Mi-cuenta img,
+.Mi-carrito img {
+  position: absolute;
+  left: 12px;
+  width: auto;
+  height: 33px;
+  pointer-events: none;
+}
+
+/* Contenedor principal */
+.Contenedor1 {
+    /* border-radius: 35px; */
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    margin: 0;
+    padding: 40px; /* Espacio interno */
+    border: solid 1px rgba(0, 0, 0, 0.733);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+/* Caja interior */
+.Caja1 {
+    background-color: #CCFFCE;
+    padding: 20px;
+    border-radius: 25px;
+    width: 75%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Barra horizontal dentro de la caja */
+.Barra-ME {
+    background-color: white;
+    color: #000000;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border: 0.3px solid #5e5e5e5d;
+}
+
+.item-Forma-pago{
+    background-color: rgb(59, 216, 93);
+    border-radius: 50px;
+}
+
+/* Ítems de la barra */
+.item-ME {
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-right: 20px;
+    cursor: pointer; /* Indicar que es interactivo */
+}
+
+.item1-ME {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+
+/* ***
+******** */
+/* Caja grande contenedora */
+.Sub-Contenedor {
+    background-color: #ffffff;
+    color: #000000;
+    width: 90%;
+    padding: 80px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column; /* general columna */
+    gap: 20px;
+    border: 1px solid #00000093;
+    box-sizing: border-box;
+}
+
+/* Nuevo contenedor para alinear lado a lado las dos cajas */
+.Fila-Metodo-Carrito {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Caja verde (Método de Envío) dentro de Sub-Contenedor */
+.Metodo-envio {
+    background-color: #7ae97e;
+    color: #000000;
+    width: 48%; /* ocupa casi la mitad del contenedor */
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #00000080;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Botón flotante */
+.Boton-ME {
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    background-color: #00d307;
+    color: #000000;
+    padding: 5px 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Contenido interno de Metodo-envio */
+.Sub-ME {
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #00000091;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.textos {
+    text-align: center;
+    width: 100%;
+    line-height: 1.3;
+}
+
+.Sub-ME h3,
+.Sub-ME h4,
+.Sub-ME p {
+    margin: 0.3px 0; /* menos espacio vertical */
+    padding: 0;
+    font-weight: normal;
+}
+
+/* contenedor horizontal de fechas y horas */
+.fechas-horas {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* cajas internas lado a lado */
+.Sub-peque1-4 {
+    background-color: #abe3ad;
+    color: #000000;
+    flex: 1;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid #0000008c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.Sub-peque2-5 {
+    background-color: #abe3ad;
+    color: #000000;
+    width: 90%; /* menor ancho */
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.Sub-peque1-4, .Sub-peque2-5 {
+    width: 90%;
+    gap: 5px;
+}
+
+.Peque1, .Peque2, .Peque3, .Peque4, .Hora, .Hora1 {
+    padding: 5px 8px;
+}
+
+.Peque1,
+.Peque2,
+.Peque3,
+.Peque4 {
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 10px 5px;
+}
+
+.Peque1 {
+    background-color: #9affc1;
+}
+
+.Peque2,
+.Peque3,
+.Peque4 {
+    background-color: #ffffff;
+    border: 1px solid #0000009c;
+}
+
+.Peque3 {
+    border-color: #0000006c;
+}
+
+.Peque4 {
+    border-color: #00000077;
+}
+
+.Fecha-linea {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.Hora1,
+.Hora {
+    background-color: #bde9bf;
+    color: #000000;
+    padding: 5px 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Caja del carrito */
+.Mi-Carrito {
+    background-color: #ccffce;
+    border-radius: 30px;
+    padding: 20px;
+    width: 48%;
+    box-sizing: border-box;
+    border: 1px solid #00000080;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilos internos de Mi-Carrito */
+.Mi-Carrito .Total, 
+.Mi-Carrito .Descuentos {
+    background-color: #ccffce;
+    padding: 15px;
+    border-radius: 20px;
+    color: #000;
+    margin: 0;
+}
+
+.Mi-Carrito .Total p.Uno, 
+.Mi-Carrito .Descuentos p.Uno {
+    font-weight: bold; 
+}
+
+.Mi-Carrito .Total p.Dos, 
+.Mi-Carrito .Descuentos p.Dos {
+    text-align: right;
+}
+
+.Mi-Carrito .Descuentos h2 {
+    margin: 0;
+}
+
+.Mi-Carrito .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.Mi-Carrito .Uno {
+    text-align: left;
+    flex: 1;
+    color: #000;
+    margin: -1px;
+}
+
+.Mi-Carrito .Dos {
+    text-align: right;
+    flex: 1;
+    color: #00641B;
+    margin: 0;
+}
+
+.Mi-Carrito .Total {
+    margin-bottom: 1px;
+}
+
+.Mi-Carrito .Descuentos {
+    margin-top: 0;
+}
+
+.linea {
+    height: 1px;
+    background-color: #ccc;
+    margin: -15px 0;
+    width: 100%;
+}
+
+.Total-img {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.fila-totales {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-producto {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.imagen-caja {
+    width: 140px;
+    height: 140px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+}
+
+.imagen-caja img {
+    max-width: 130%;
+    max-height: 130%;
+    object-fit: cover;
+}
+
+.Derecha {
+    flex: 1;
+    margin: -5px;
+}
+
+.Editar {
+    margin-top: 6px;
+    list-style: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.Derecha p {
+    margin: 2px 0;
+    line-height: 1.2;
+}
+
+.Continuar {
+    background-color: #00d307;
+    color: #000000;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    display: block;
+    width: 90%;
+    margin: 10px auto 0;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Continuar:hover {
+    background-color: #00b506;
+}
+
+/* Estilo para el mensaje de seguridad */
+.Compra-Segura {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #00d307;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilos adicionales */
+
+.Visa {
+    background-color: #d9fdd3;
+    padding: 12px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    border: 1px solid #b0e6a3;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.Datos {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.Fila-Cuotas-Tipo {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.Cuotas, .Tipo {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: #000;
+    border: 1px solid #b0e6a3;
+}
+
+
+.Visa {
+  display: flex;
+  align-items: center; /* Centra verticalmente la imagen y el texto */
+  gap: 10px; /* Espacio entre imagen y texto */
+}
+
+.Visa img {
+  width: 40px; /* Ajusta el tamaño de la imagen a tu gusto */
+  height: auto;
+  object-fit: contain;
+}
+
+.Visa .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.Visa {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre imagen y texto */
+  padding: 0; /* Quitamos padding interno */
+  margin: 0;  /* Por si tiene margen externo */
+}
+
+.Visa img {
+  width: 65px;         /* Ajusta según necesidad */
+  height: auto;
+  object-fit: contain;
+  margin-left: 0;      /* Asegura que no se despegue del borde */
+  padding-left: 0;
+}
+
+.Visa .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Visa {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Menos espacio entre imagen y texto */
+  /* padding: 5px; */  /* Solo un poco de espacio interno si deseas */
+  border-radius: 15px;
+}
+
+.Visa {
+  display: flex;
+  align-items: center;
+  gap: 12px;                 /* Espacio entre imagen y texto */
+  background-color: #d9fdd3;
+  padding: 10px 15px;        /* Acolchado general */
+  border-radius: 20px;
+  border: 1px solid #b0e6a3;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.Visa img {
+  width: 60px;               /* Tamaño de la imagen */
+  height: auto;
+  object-fit: contain;
+  margin: 0;                 /* Quita márgenes por si acaso */
+}
+
+.Visa .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+  font-size: 14px;
+  color: #000;
+}
+
+
+.Metodo-envio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaciado uniforme entre métodos */
+  padding: 10px;
+}
+
+.metodo {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #00cc00;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.metodo:hover {
+  transform: scale(1.02);
+}
+
+.metodo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.metodo span {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+}
+
+
+
+.Pagos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Espaciado entre métodos */
+  padding: 10px;
+  width: 150px; /* Ajusta el ancho según lo necesites */
+}
+
+.Visa {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #00cc00;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.Visa:hover {
+  transform: scale(1.02);
+}
+
+.Visa img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 15px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 15px;
+}
+
