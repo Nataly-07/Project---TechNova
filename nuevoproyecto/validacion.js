@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mostrarMsg("Todos los campos son obligatorios.", "error");
 
     } else if (password.length < 6) {
-      mostrarMsg("La password debe tener al menos 6 dígitos.", "error");
+      mostrarMsg("La contraseña debe tener al menos 6 dígitos.", "error");
 
     } else {
     
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
 
       setTimeout(() => {
-        window.location.href = "perfil.html";
+        window.location.href = "perfilcli.html";
       }, 1000);
     }
   });
