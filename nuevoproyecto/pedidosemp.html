@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Mensajes - Technova</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pedidos</title>
 
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="estilodas.css">
-  <link rel="stylesheet" href="stilotech.css">
-  <script src="mensajes.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="estilodas.css">
+    <link rel="stylesheet" href="stilotech.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -24,24 +24,26 @@
     </div>
 
     <div class="acciones-usuario">
-      <a href="#" class="account"><i class='bx bx-user-circle'></i> <span>Perfil</span></a>
+      <a href="perfilad.html" class="account"><i class='bx bx-user-circle'></i> <span>Perfil</span></a>
       <a href="index.html" class="account"><i class='bx bx-log-out'></i> <span>Cerrar Sesion</span></a>
-      <a href="#" class="account"><i class='bx bx-cog'></i> <span>Configuracion</span></a>
+      <a href="error500.html" class="cart"><i class='bx bx-cog'></i> <span>Configuracion</span></a>
     </div>
   </header>
 
   <div class="dashboard-wrapper">
     <div class="menu-dashboard">
+      <!-- TOP MENU -->
       <div class="top-menu">
         <div class="logo">
           <img src="./imagenes/logo technova.png" alt=""> 
-          <span>Panel Administrador</span>
+          <span>Dashboard Empleado</span>
         </div>
         <div class="toggle">
           <i class='bx bx-menu'></i>
         </div>
       </div>
 
+      <!-- INPUT SEARCH -->
       <div class="input-search">
         <i class='bx bx-search'></i>
         <input type="text" class="input" placeholder="Buscar">
@@ -59,14 +61,38 @@
       </div>
     </div><!-- /.menu-dashboard -->
 
+    <!-- PRINCIPAL -->
     <main class="main-content">
-      <h1>Mensajes</h1>
+      <h1>Ver Pedidos</h1>
 
-      <ul class="messages-list">
-        <li><strong>Juan Pérez</strong>: Nuevo Mensaje De Administrador</li>
-        <li><strong>María López</strong>: Nuevo Mensaje De Cliente</li>
-        <li><strong>Carlos Rivera</strong>: Nuevo Mensaje De Cliente</li>
-      </ul>
+      <table class="table-pedidos">
+        <thead>
+          <tr>
+            <th>ID Pedido</th>
+            <th>Fecha</th>
+            <th>Usuario</th>
+            <th>Valor</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1001</td>
+            <td>2025-06-15</td>
+            <td>Juan Pérez</td>
+            <td>$500,000</td>
+            <td>En tránsito</td>
+          </tr>
+          <tr>
+            <td>1002</td>
+            <td>2025-06-16</td>
+            <td>María Lopez</td>
+            <td>$300,000</td>
+            <td>En preparación</td>
+          </tr>
+          <!-- Agregar más filas según sea necesario -->
+        </tbody>
+      </table>
 
     </main><!-- /main-content -->
 
