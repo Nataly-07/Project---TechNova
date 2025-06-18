@@ -587,3 +587,21 @@ footer {
 .main-content .payments ul li:hover::before {
     width: 100%;
 }
+
+
+.graficas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 30px 0;
+  justify-content: space-around;
+}
+
+.grafica-container {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
