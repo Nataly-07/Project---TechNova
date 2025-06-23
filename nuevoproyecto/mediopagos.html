@@ -5,6 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Medios De Pago</title>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const formulario = document.querySelector(".form-metodo-pago form");
+
+  formulario.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const tipo = formulario.tipo.value.trim();
+    const numero = formulario.numero.value.trim();
+    const titular = formulario.titular.value.trim();
+
+    if (!tipo || !numero || !titular) {
+      alert("Por favor completa todos los campos.");
+      return;
+    }
+
+    // Simulamos guardar y mostramos mensaje
+    Swal.fire({
+      icon: "success",
+      title: "¡Método guardado!",
+      text: "Tu nuevo medio de pago ha sido registrado correctamente.",
+      confirmButtonColor: "#00cc44"
+    });
+
+    formulario.reset();
+  });
+});
+</script>
+
+
+
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="estilodas.css">
@@ -62,22 +95,48 @@
       </div>
     </div><!-- /.menu-dashboard --
 
-    <!-- PRINCIPAL -->
+    /*PRINCIPAL -->
     <main class="main-content">
-      <h1>Medios De Pago</h1>
+      <h1>Medios de Pago</h1>
 
-      <table class="table-proveedores">
-        <thead>
-          <tr>
-            <th>Nequi</th>
-            <th>---------------</th>
-            <th>Daviplata</th>
-            <th>----------------</th>
-            <th>Tarjeta Credito ********3987</th>
-            <th>----------------</th>
-            <th>Tarjeta Debito ********3999</th>
-          </tr>
-        </thead>
+<div class="payments">
+  <h2>Tarjetas Asociadas</h2>
+  <ul>
+    <li><i class='bx bxs-credit-card'></i> Visa – **** 1234</li>
+    <li><i class='bx bxs-credit-card'></i> MasterCard – **** 5678</li>
+  </ul>
+
+  <h2>Métodos Alternativos</h2>
+  <ul>
+    <li><i class='bx bx-money'></i> Transferencia bancaria</li>
+    <li><i class='bx bx-mobile-alt'></i> Nequi / Daviplata</li>
+    <li><i class='bx bx-wallet'></i> Pago contra entrega</li>
+  </ul>
+
+ <div class="form-metodo-pago">
+  <h2>Agregar nuevo medio de pago</h2>
+  <form>
+    <label for="tipo">Tipo de método</label>
+    <select id="tipo" name="tipo">
+      <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+      <option value="transferencia">Transferencia Bancaria</option>
+      <option value="nequi">Nequi</option>
+      <option value="daviplata">Daviplata</option>
+      <option value="efectivo">Pago contra entrega</option>
+    </select>
+
+    <label for="numero">Número / Referencia</label>
+    <input type="text" id="numero" name="numero" placeholder="•••• •••• •••• 1234">
+
+    <label for="titular">Titular</label>
+    <input type="text" id="titular" name="titular" placeholder="Nombre del titular">
+
+    <button type="submit"><i class='bx bx-save'></i> Guardar método</button>
+  </form>
+</div>
+
+</div>
+
         
     </main><!-- /main-content -->
 

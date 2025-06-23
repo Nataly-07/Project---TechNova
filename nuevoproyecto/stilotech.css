@@ -497,3 +497,124 @@ a {
   transform: scale(0.95);
 }
 
+
+
+.payments {
+  background: #edf5ff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  border: 1px solid #b3d9ff;
+  max-width: 700px;
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 18px;
+}
+
+.payments h2 {
+  color: #007acc;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.payments ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.payments ul li {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.agregar-btn {
+  background-color: #00cc44;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-size: 16px;
+}
+
+.agregar-btn:hover {
+  background-color: #009933;
+  transform: scale(1.05);
+}
+
+
+.form-metodo-pago {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  border: 1px solid #b3d9ff;
+  color: #555;
+  font-size: 18px;
+}
+
+.form-metodo-pago h2 {
+  color: #00cc44;
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-metodo-pago label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #007acc;
+}
+
+.form-metodo-pago input,
+.form-metodo-pago select {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 1px solid #00cc44;
+  background: #edf5ff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-metodo-pago input:focus,
+.form-metodo-pago select:focus {
+  border-color: #00cc44;
+  box-shadow: 0 0 10px #00cc44;
+  outline: none;
+}
+
+.form-metodo-pago button {
+  background: #00cc44;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.form-metodo-pago button:hover {
+  background: #009933;
+  transform: translateY(-3px);
+}

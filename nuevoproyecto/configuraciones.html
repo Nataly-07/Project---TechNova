@@ -49,33 +49,46 @@
         <input type="text" class="input" placeholder="Buscar">
       </div>
 
-      <!-- MENÚ -->
       <div class="menu">
         <div class="enlace"><a href="perfilad.html"><i class='bx bx-user-circle'></i> Mi Perfil</a></div>
         <div class="enlace"><a href="usuarios.html"><i class='bx bx-user'></i> Usuarios</a></div>
-        <div class="enlace"><a href="dashboardad.html"><i class='bx bx-chart'></i> Estadisticas Página</a></div>
+        <div class="enlace"><a href="dashboardad.html"><i class='bx bx-chart'></i> Estadisticas</a></div>
         <div class="enlace"><a href="mensajes.html"><i class='bx bx-message'></i> Mensajes</a></div>
-        <div class="enlace"><a href="inventario.html"><i class='bx bx-shopping-bag'></i> Inventario</a></div>
-        <div class="enlace"><a href="pedidos.html"><i class='bx bx-cart'></i> Pedidos</a></div>
+        <div class="enlace"><a href="inventario.html"><i class='bx bx-shopping-bag'></i> Productos</a></div>
+        <div class="enlace"><a href="inventarioproductos.html"><i class='bx bx-shopping-bag'></i> Inventario</a></div>
+        <div class="enlace"><a href="pedidosad.html"><i class='bx bx-cart'></i> Pedidos</a></div>
         <div class="enlace"><a href="pagos.html"><i class='bx bx-credit-card'></i> Pagos</a></div>
         <div class="enlace"><a href="proveedores.html"><i class='bx bx-user-circle'></i> Proveedores</a></div>
         <div class="enlace"><a href="configuraciones.html"><i class='bx bx-cog'></i> Configuraciones</a></div>
         <div class="enlace"><a href="index.html"><i class='bx bx-log-out'></i> Cerrar Sesion</a></div>
       </div>
+
     </div><!-- /.menu-dashboard -->
+
 
     <!-- PRINCIPAL -->
     <main class="main-content">
-      <h1>Configuraciones</h1>
+     <h1>Configuraciones</h1>
 
-      <form class="form-configuracion">
-        <label>Nombre de la aplicación:<input type="text" value="Technova"></label>
-        <label>Moneda:<input type="text" value="$ (COP)"></label>
-        <label>Valor IVA:<input type="number" value="19" min="0" max="100"> %</label>
-        <label>Email de contacto:<input type="email" value="contacto@technova.com"></label>
-        <label>Teléfono:<input type="text" value="+57 555-5555"></label>
-        <button>Guardar Cambios</button>
-      </form>
+<form class="form-configuracion">
+  <label for="nombreEmpresa">Nombre de la empresa</label>
+  <input type="text" id="nombreEmpresa" name="nombreEmpresa" placeholder="Technova S.A.S.">
+
+  <label for="correoAdmin">Correo del administrador</label>
+  <input type="email" id="correoAdmin" name="correoAdmin" placeholder="admin@technova.com">
+
+  <label for="cambiarPassword">Nueva contraseña</label>
+  <input type="password" id="cambiarPassword" name="cambiarPassword" placeholder="••••••••">
+
+  <label for="notificaciones">Notificaciones</label>
+  <select id="notificaciones" name="notificaciones">
+    <option value="activadas">Activadas</option>
+    <option value="desactivadas">Desactivadas</option>
+  </select>
+
+  <button type="submit">Guardar cambios</button>
+</form>
+
 
     </main><!-- /main-content -->
 
