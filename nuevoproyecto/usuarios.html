@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Usuarios - Technova</title>
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="estilodas.css" />
+  <link rel="stylesheet" href="stilotech.css" />
 
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="estilodas.css">
-  <link rel="stylesheet" href="stilotech.css">
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="usuarios.js" defer></script>
 </head>
 <body>
   <header class="header">
     <a href="index.html" class="logo">
-      <img src="imagenes/logo technova.png" alt="Logo">
+      <img src="imagenes/logo technova.png" alt="Logo" />
       <span>TECHNOVA</span>
     </a>
-
     <div class="search-bar">
-      <input type="text" placeholder="¿Qué estás buscando hoy?">
+      <input type="text" placeholder="¿Qué estás buscando hoy?" />
       <button class="search-btn">&#128269;</button>
     </div>
-
     <div class="acciones-usuario">
-      <a href="#" class="account"><i class='bx bx-user-circle'></i> <span>Perfil</span></a>
-      <a href="index.html" class="account"><i class='bx bx-log-out'></i> <span>Cerrar Sesion</span></a>
-      <a href="#" class="account"><i class='bx bx-cog'></i> <span>Configuracion</span></a>
+      <a href="#" class="account"><i class="bx bx-user-circle"></i><span>Perfil</span></a>
+      <a href="index.html" class="account"><i class="bx bx-log-out"></i><span>Cerrar Sesión</span></a>
+      <a href="#" class="account"><i class="bx bx-cog"></i><span>Configuración</span></a>
     </div>
   </header>
 
   <div class="dashboard-wrapper">
     <div class="menu-dashboard">
+      <!-- Menú lateral -->
       <div class="top-menu">
         <div class="logo">
-          <img src="./imagenes/logo technova.png" alt=""> 
+          <img src="imagenes/logo technova.png" alt="Logo" />
           <span>Panel Administrador</span>
         </div>
-        <div class="toggle">
-          <i class='bx bx-menu'></i>
-        </div>
+        <div class="toggle"><i class="bx bx-menu"></i></div>
       </div>
-
       <div class="input-search">
-        <i class='bx bx-search'></i>
-        <input type="text" class="input" placeholder="Buscar">
+        <i class="bx bx-search"></i>
+        <input type="text" class="input" placeholder="Buscar" />
       </div>
-
       <div class="menu">
         <div class="enlace"><a href="perfilad.html"><i class='bx bx-user-circle'></i> Mi Perfil</a></div>
         <div class="enlace"><a href="usuarios.html"><i class='bx bx-user'></i> Usuarios</a></div>
@@ -60,42 +56,58 @@
         <div class="enlace"><a href="configuraciones.html"><i class='bx bx-cog'></i> Configuraciones</a></div>
         <div class="enlace"><a href="index.html"><i class='bx bx-log-out'></i> Cerrar Sesion</a></div>
       </div>
+    </div>
+<main class="main-content">
+    <h1>Usuarios</h1>
 
-    </div><!-- /.menu-dashboard -->
+    <!-- 📋 Formulario para nuevo usuario -->
+     <div class="form-nuevo-usuario">
+      <h2>Agregar Nuevo Usuario</h2>
+      <form id="nuevoUsuarioForm">
+        <input type="text" id="nuevoNombre" placeholder="Nombre completo" required />
+        <input type="email" id="nuevoCorreo" placeholder="Correo electrónico" required />
+        <input type="text" id="nuevaImagen" placeholder="URL de imagen (opcional)" />
+        <select id="nuevoRol">
+          <option value="cliente">Cliente</option>
+          <option value="admin">Administrador</option>
+          <option value="empleado">Empleado</option>
+        </select>
+        <button type="submit"><i class='bx bx-user-plus'></i> Agregar Usuario</button>
+      </form>
+    </div>
 
 
-    <main class="main-content">
-      <h1>Usuarios</h1>
+<div class="acciones-usuarios">
+      <input type="text" id="buscadorUsuarios" placeholder="Buscar usuario..." />
+    </div>
 
-      <div class="cards">
-        <!-- Aquí irán los productos de ejemplo -->
-        <div class="card">
-          <img src=".//images.png" alt="Usuario 1">
-          <h2>Juan Pérez</h2>
-          <p>juan.perez@technova.com</p>
-        </div>
+    <div class="filtro-roles">
+  <label for="filtroRol">Filtrar por rol:</label>
+  <select id="filtroRol">
+    <option value="todos">Todos</option>
+    <option value="admin">Administrador</option>
+    <option value="cliente">Cliente</option>
+    <option value="empleado">Empleado</option>
+  </select>
+</div>
 
-        <div class="card">
-          <img src=".//images.png" alt="Usuario 2">
-          <h2>María López</h2>
-          <p>maria.lopez@technova.com</p>
-        </div>
+    <h2 id="contadorUsuarios">Total de usuarios: 0</h2>
 
-        <div class="card">
-          <img src=".//images.png" alt="Usuario 3">
-          <h2>Carlos Rivera</h2>
-          <p>carlos.rivera@technova.com</p>
-        </div>
-
-      </div><!-- /cards -->
-
-    </main><!-- /main-content -->
-
-  </div><!-- /dashboard-wrapper -->
-
-  <footer>
-    &copy; 2025 Technova
-  </footer>
-
+    <!-- Tabla de Usuarios -->
+    <table class="table-usuarios">
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Rol</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="usuarios-body">
+        <!-- Aquí se insertan dinámicamente los usuarios -->
+      </tbody>
+    </table>
+  </main>
 </body>
 </html>
