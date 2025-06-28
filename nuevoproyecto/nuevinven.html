@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventario - Technova</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="nuevinven.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="inventario.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Inventario de Tecnología</h1>
+  </header>
+
+  <main class="main-content">
+    <section class="form-nuevo">
+      <h2>Agregar Producto</h2>
+      <form id="formProducto">
+        <input type="text" id="nombre" placeholder="Nombre" required />
+        <input type="text" id="marca" placeholder="Marca" required />
+        <input type="number" id="precio" placeholder="Precio" required />
+        <input type="number" id="stock" placeholder="Stock" required />
+        <select id="categoria">
+          <option value="computador">Computador</option>
+          <option value="celular">Celular</option>
+          <option value="tablet">Tablet</option>
+          <option value="accesorio">Accesorio</option>
+        </select>
+        <button type="submit">Agregar</button>
+      </form>
+    </section>
+
+    <section class="filtros">
+      <input type="text" id="buscarProducto" placeholder="Buscar producto..." />
+      <select id="filtroCategoria">
+        <option value="todos">Todos</option>
+        <option value="computador">Computador</option>
+        <option value="celular">Celular</option>
+        <option value="tablet">Tablet</option>
+        <option value="accesorio">Accesorio</option>
+      </select>
+    </section>
+
+    <h3 id="contadorProductos">Total: 0 productos</h3>
+
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Marca</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Categoría</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tbodyProductos"></tbody>
+    </table>
+  </main>
+</body>
+</html>
