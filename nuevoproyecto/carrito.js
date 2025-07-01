@@ -47,3 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+function agregarAlCarrito(nombre, precio, imagen) {
+  const producto = { nombre, precio, imagen };
+  let carrito = JSON.parse(localStorage.getItem("carritoTech")) || [];
+  carrito.push(producto);
+  localStorage.setItem("carritoTech", JSON.stringify(carrito));
+  alert(`${nombre} fue agregado al carrito 🛒`);
+}

@@ -428,74 +428,8 @@ a {
   box-shadow: 0 12px 30px 0 rgba(10, 226, 6, 0.37);
 }
 
-/*carrito*/
-#carrito-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #ccffcc;
-  padding: 20px;
-  border-radius: 20px;
-  border: 1px solid #5f5f5f;
-  box-shadow: 0 0 12px rgb(0 0 0 / 0.5);
-  max-width: 250px;
-  z-index: 1000;
-  color: #000;
-}
 
-#carrito-float h2 {
-  color: #007f00;
-  margin-bottom: 20px;
-  font-size: 20px;
-  font-weight: bold;
-}
 
-#carrito-float ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 10px;
-}
-
-#carrito-float ul li {
-  background: #fff;
-  color: #000;
-  padding: 10px 15px;
-  border-radius: 15px;
-  margin-bottom: 5px;
-  border: 1px solid #5f5f5f;
-  box-shadow: 0 0 5px #00000033;
-  font-size: 16px;
-}
-
-#carrito-float p {
-  color: #007f00;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-#irCarritoBtn {
-  display: block;
-  text-decoration: none;
-  background: #00cc44;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-align: center;
-  border: 1px solid #5f5f5f;
-  box-shadow: 0 0 5px rgb(0 0 0 / 0.5);
-  transition: background 0.3s, transform 0.2s;
-}
-
-#irCarritoBtn:hover {
-  background: #009933;
-  transform: scale(1.05);
-}
-
-#irCarritoBtn:active {
-  transform: scale(0.95);
-}
 
 
 
@@ -695,106 +629,102 @@ a {
 }
 
 /* Carrito flotante mejorado */
+/* Botón flotante minimalista */
+#carrito-toggle {
+  position: fixed;
+  top: 120px;
+  right: 24px;
+  background-color: #ffffff;
+  color: white;
+  font-size: 1.4rem;
+  padding: 12px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+#carrito-toggle:hover {
+  background-color: #019933;
+}
+
+/* Panel del carrito */
 #carrito-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #f0fff0;
-  padding: 20px;
-  border-radius: 20px;
-  border: 1px solid #5f5f5f;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  max-width: 260px;
-  z-index: 1000;
-  color: #000;
+  top: 70px;
+  right: 80px;
+  width: 300px;
+  background-color: #ffffff;
+  border: 2px solid #00cc44;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 18px;
+  z-index: 999;
+  font-family: 'Segoe UI', sans-serif;
+  display: none;
+}
+
+#carrito-float.abierto {
+  display: block;
 }
 
 #carrito-float h2 {
   color: #00cc44;
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  text-align: center;
 }
 
-#carrito-float ul {
+#lista-carrito {
+  max-height: 150px;
+  overflow-y: auto;
   list-style: none;
   padding: 0;
-  margin-bottom: 10px;
+  margin: 0 0 12px;
 }
 
-#carrito-float ul li {
-  background: #ffffff;
-  padding: 10px 15px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  margin-bottom: 5px;
+#lista-carrito li {
+  background: #f5f5f5;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
 }
 
-#carrito-float p {
-  color: #009933;
-  font-weight: bold;
-  margin-bottom: 15px;
+.botones-carrito {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
 }
 
-#irCarritoBtn {
-  display: inline-block;
-  background: #00cc44;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-align: center;
+#irCarritoBtn,
+#vaciarCarritoBtn {
+  flex: 1;
+  background-color: #00cc44;
+  color: white;
   border: none;
-  transition: background 0.3s, transform 0.2s;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.85rem;
   text-decoration: none;
+  text-align: center;
+}
+
+#vaciarCarritoBtn {
+  background-color: #ff4d4d;
+}
+
+#vaciarCarritoBtn:hover {
+  background-color: #d63a3a;
 }
 
 #irCarritoBtn:hover {
-  background: #009933;
-  transform: scale(1.05);
-}/*carrito*/
-@media (max-width: 767px) {
-  #carrito-float {
-    display: none;
-  }
+  background-color: #019933;
 }
 
-
-.vaciar-btn {
-  background: #ff4d4d;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  margin-top: 10px;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
-  width: 100%;
-  transition: background 0.3s ease;
-}
-
-.vaciar-btn:hover {
-  background: #cc0000;
-}
-
-.agregado {
-  animation: resaltar 0.5s ease;
-}
-
-@keyframes resaltar {
-  0% { background-color: #c0f5c0; }
-  100% { background-color: #fff; }
-}
-
-
-.agregado {
-  animation: resaltar 0.5s ease;
-}
-
-@keyframes resaltar {
-  0% { background-color: #c0f5c0; }
-  100% { background-color: #fff; }
-}
 
 
 
@@ -1116,4 +1046,122 @@ a {
 
 .accion.eliminar:hover {
   background-color: #d11a2a;
+}
+
+
+.menu-principal {
+  background-color: #00cc44;
+  padding: 12px;
+  text-align: center;
+}
+
+.menu-principal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-principal > ul > li {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+
+.menu-principal a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 16px;
+  display: inline-block;
+}
+
+.menu-principal .submenu-lista {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.menu-principal .submenu-lista li {
+  display: block;
+}
+
+.menu-principal .submenu-lista a {
+  color: #333;
+  padding: 10px 20px;
+  display: block;
+}
+
+.menu-principal .submenu:hover .submenu-lista {
+  display: block;
+}
+
+.buscador-productos {
+  text-align: center;
+  margin: 30px auto 10px;
+}
+
+#input-buscador {
+  width: 80%;
+  max-width: 500px;
+  padding: 12px 16px;
+  border: 2px solid #00cc44;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+
+
+.carrusel-productos-contenedor {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+.carrusel-track {
+  display: flex;
+  gap: 24px;
+  scroll-behavior: smooth;
+  transition: transform 0.4s ease-in-out;
+  overflow-x: auto;          /* ← Esto habilita el deslizamiento */
+  scroll-snap-type: x mandatory; /* Opcional: hace que se alinee cada producto */
+  -webkit-overflow-scrolling: touch; /* Suavidad en móviles */
+}
+
+
+.carrusel-track .producto {
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: #00cc44;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carrusel-btn.prev {
+  left: 10px;
+}
+
+.carrusel-btn.next {
+  right: 10px;
+}
+
+.carrusel-track::-webkit-scrollbar {
+  display: none;
 }

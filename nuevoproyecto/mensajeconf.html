@@ -3,61 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technova</title>
+  <title>Technova | Confirmación de Compra</title>
   <link rel="stylesheet" href="comprainfo.css">
   <link rel="stylesheet" href="stilotech.css">
 </head>
 <body>
-   <header class="header">
- 
-
-  <a href="index.html" class="logo">
-    <img src="imagenes/logo technova.png" alt="Logo">
-    <span>TECHNOVA</span>
-  </a>
-
-  <div class="search-bar">
-    <input type="text" placeholder="¿Qué estás buscando hoy?">
-    <button class="search-btn">&#128269;</button>
-  </div>
-
-  <div class="acciones-usuario">
-    <a href="iniciosesion.html" class="account">
-      <span>Iniciar Sesión</span>
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="imagenes/logo technova.png" alt="Logo">
+      <span>TECHNOVA</span>
     </a>
-    <a href="creacioncuenta.html" class="account">
-      <span>Crear Cuenta</span>
-    </a>
-    <a href="error500.html" class="cart">
-      <span class="cart-icon">&#128722;</span>
-      <span>Mi Carrito</span>
-    </a>
-  </div>
-</header>
-    <body>
-     <div class="cart-section">
-                <h2 class="cart-title">Mi Carrito</h2>
-                <div class="cart-summary">
-                    <p><strong>Felicidades</strong> </p>
-                    <p><strong>Tu Compra Se a  Realizado Con Exito</strong></p>
-                    <p><strong>Tu Factura Y Tu Numero De Seguimiento</strong><br>
-                        <p><strong>A Tu Correo Electronico</strong><br>
-                        
-                    <a href="index.html" class="account">
-      <span>Volver a Inicio</span>
-    </a>
-                </div>
-                
-            </div>
-        
-            
-
-          
-        
-
-        <div class="footer-msg">
-            ¡ No te preocupes ¡ Tu compra es 100% segura
-        </div>
+    <div class="search-bar">
+      <input type="text" placeholder="¿Qué estás buscando hoy?">
+      <button class="search-btn">&#128269;</button>
     </div>
+    <div class="acciones-usuario">
+      <a href="iniciosesion.html" class="account"><span>Iniciar Sesión</span></a>
+      <a href="creacioncuenta.html" class="account"><span>Crear Cuenta</span></a>
+      <a href="error500.html" class="cart">
+        <span class="cart-icon">&#128722;</span>
+        <span>Mi Carrito</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="confirmacion-compra">
+    <div class="check-circle">
+      <svg viewBox="0 0 24 24">
+        <path d="M20.285 6.709l-11.025 11.024-5.536-5.536 1.414-1.414 4.122 4.122 9.611-9.611z"/>
+      </svg>
+    </div>
+    <h2>¡Compra confirmada!</h2>
+    <p><strong>Gracias por confiar en Technova, Tania.</strong></p>
+    <p>Tu pedido ha sido procesado con éxito y estamos preparando todo para enviarlo.</p>
+    <p>Recibirás la factura y tu número de seguimiento en tu correo electrónico.</p>
+
+    <div class="acciones-finales">
+      <a href="index.html">Volver al Inicio</a>
+    </div>
+  </main>
+
+  <div class="footer-msg">
+    ¡No te preocupes! Tu compra es 100% segura 💚
+  </div>
+
+  <script>
+    localStorage.removeItem("carrito");
+  </script>
 </body>
 </html>

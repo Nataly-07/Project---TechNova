@@ -9,34 +9,34 @@ if (!inventario || inventario.length === 0) {
   inventario = [
     {
       codigo: "CEL-101",
-      nombre: "iPhone 14 Pro",
-      imagen: "imagenes/iphone.png",
-      precioCompra: 2500000,
-      precioVenta: 3200000,
+      nombre: "iPhone 16 Pro Max 256 GB",
+      imagen: "imagenes/iphonre16promaxgris.webp",
+      precioCompra: 6000000,
+      precioVenta: 6699010,
       unidades: 12
     },
     {
       codigo: "LAP-305",
       nombre: "Lenovo IdeaPad 3",
-      imagen: "imagenes/lenovo.png",
+      imagen: "imagenes/LENOVO IdeaPad.webp",
       precioCompra: 1800000,
       precioVenta: 2350000,
       unidades: 8
     },
     {
       codigo: "TAB-204",
-      nombre: "Galaxy Tab S8",
-      imagen: "imagenes/galaxytab.png",
-      precioCompra: 1200000,
-      precioVenta: 1590000,
+      nombre: "Galaxy S24 FE 256 GB",
+      imagen: "imagenes/samsunggalaxys24fe.webp",
+      precioCompra: 2000000,
+      precioVenta: 2499900 ,
       unidades: 5
     },
     {
       codigo: "CEL-229",
-      nombre: "Redmi Note 13",
-      imagen: "imagenes/redmi.png",
-      precioCompra: 850000,
-      precioVenta: 1080000,
+      nombre: "Redmi Note 14 Pro 256 GB",
+      imagen: "imagenes/redminote14pro.webp",
+      precioCompra: 1100000,
+      precioVenta: 1449010,
       unidades: 0
     }
   ];
