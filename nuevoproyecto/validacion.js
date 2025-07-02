@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
 
       setTimeout(() => {
-        window.location.href = "perfilcli.html";
+        window.location.href = "perfilad.html";
       }, 1000);
     }
   });

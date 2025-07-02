@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="estilos1.css" />
 </head>
 <body>
-  <!-- Encabezado TECHNOVA -->
   <header class="header">
     <div class="menu-icon">&#9776;</div>
     <a href="index.html" class="logo">
@@ -25,84 +24,108 @@
     </div>
   </header>
 
-  <!-- Formulario -->
   <main class="login-box">
     <h2>TECHNOVA</h2>
     <h3>Formulario de Registro</h3>
     <form id="registro-form" novalidate>
 
+      <!-- Repite este patrón para cada campo -->
       <div class="form-group">
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" required>
-        <span class="icono" id="icono-nombre"></span>
-        <small class="error" id="error-nombre"></small>
+        <div class="campo-icono">
+          <input type="text" id="nombre" required />
+          <span class="icono" id="icono-nombre"></span>
+        </div>
+        <small class="requisito" id="error-nombre">Solo letras, mínimo 3 caracteres</small>
       </div>
 
       <div class="form-group">
         <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" required>
-        <span class="icono" id="icono-apellido"></span>
-        <small class="error" id="error-apellido"></small>
+        <div class="campo-icono">
+          <input type="text" id="apellido" required />
+          <span class="icono" id="icono-apellido"></span>
+        </div>
+        <small class="requisito" id="error-apellido">Solo letras, mínimo 4 caracteres</small>
       </div>
 
       <div class="form-group">
         <label for="tipo-doc">Tipo de Documento</label>
         <select id="tipo-doc" required>
           <option value="">Selecciona</option>
-          <option value="CC">Cédula</option>
+          <option value="CC">Cédula De Ciudadaia</option>
           <option value="TI">Tarjeta de Identidad</option>
           <option value="CE">Cédula de Extranjería</option>
         </select>
-        <small class="error" id="error-tipo-doc"></small>
+        <small class="requisito" id="error-tipo-doc">Selecciona un tipo válido</small>
       </div>
 
       <div class="form-group">
         <label for="documento">Número de Documento</label>
-        <input type="text" id="documento" required>
-        <span class="icono" id="icono-doc"></span>
-        <small class="error" id="error-documento"></small>
+        <div class="campo-icono">
+          <input type="text" id="documento" required />
+          <span class="icono" id="icono-documento"></span>
+        </div>
+        <small class="requisito" id="error-documento">Solo números (7 a 10 dígitos)</small>
       </div>
 
       <div class="form-group">
         <label for="correo">Correo Electrónico</label>
-        <input type="email" id="correo" required>
-        <span class="icono" id="icono-correo"></span>
-        <small class="error" id="error-correo"></small>
+        <div class="campo-icono">
+          <input type="email" id="correo" required />
+          <span class="icono" id="icono-correo"></span>
+        </div>
+        <small class="requisito" id="error-correo">Formato válido (ej: ejemplo@dominio.com)</small>
       </div>
 
       <div class="form-group">
         <label for="confirmar-correo">Confirmar Correo</label>
-        <input type="email" id="confirmar-correo" required>
-        <span class="icono" id="icono-confirmar-correo"></span>
-        <small class="error" id="error-confirmar-correo"></small>
+        <div class="campo-icono">
+          <input type="email" id="confirmar-correo" required />
+          <span class="icono" id="icono-confirmar-correo"></span>
+        </div>
+        <small class="requisito" id="error-confirmar-correo">Debe coincidir con el anterior</small>
       </div>
 
       <div class="form-group">
         <label for="telefono">Teléfono Celular</label>
-        <input type="tel" id="telefono" required>
-        <span class="icono" id="icono-telefono"></span>
-        <small class="error" id="error-telefono"></small>
+        <div class="campo-icono">
+          <input type="tel" id="telefono" required />
+          <span class="icono" id="icono-telefono"></span>
+        </div>
+        <small class="requisito" id="error-telefono">10 dígitos numéricos exactos</small>
       </div>
 
       <div class="form-group">
         <label for="direccion">Dirección de Residencia</label>
-        <input type="text" id="direccion" required>
-        <span class="icono" id="icono-direccion"></span>
-        <small class="error" id="error-direccion"></small>
+        <div class="campo-icono">
+          <input type="text" id="direccion" required />
+          <span class="icono" id="icono-direccion"></span>
+        </div>
+        <small class="requisito" id="error-direccion">Mínimo 8 caracteres</small>
       </div>
 
       <div class="form-group">
         <label for="password">Contraseña</label>
-        <input type="password" id="password" required>
-        <span class="icono" id="icono-pass"></span>
-        <small class="error" id="error-password"></small>
+        <div class="campo-icono">
+          <input type="password" id="password" required />
+          <span class="icono" id="icono-password"></span>
+        </div>
+        <div class="password-requisitos">
+          <p class="requisito" data-req="length">✔ Mínimo 8 caracteres</p>
+          <p class="requisito" data-req="upper">✔ Mayúscula</p>
+          <p class="requisito" data-req="lower">✔ Minúscula</p>
+          <p class="requisito" data-req="digit">✔ Número</p>
+          <p class="requisito" data-req="special">✔ Carácter especial</p>
+        </div>
       </div>
 
       <div class="form-group">
         <label for="confirmar-password">Confirmar Contraseña</label>
-        <input type="password" id="confirmar-password" required>
-        <span class="icono" id="icono-confirmar-pass"></span>
-        <small class="error" id="error-confirmar-password"></small>
+        <div class="campo-icono">
+          <input type="password" id="confirmar-password" required />
+          <span class="icono" id="icono-confirmar-password"></span>
+        </div>
+        <small class="requisito" id="error-confirmar-password">Debe coincidir con la anterior</small>
       </div>
 
       <div id="mensaje" class="mensaje-confirmacion"></div>

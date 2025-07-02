@@ -1,4 +1,4 @@
-/* Colores y tipografía base */
+/* Base */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #e8fbe8;
@@ -6,25 +6,35 @@ body {
   padding: 0;
 }
 
-/* Header TECHNOVA (idéntico al tuyo original) */
+/* Header TECHNOVA */
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
   background-color: #00cc44;
   padding: 10px 20px;
   border-radius: 0 0 30px 30px;
   border: 1px solid #5f5f5f;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
 }
-.menu-icon { font-size: 28px; cursor: pointer; color: black; }
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+}
 .logo {
-  display: flex; align-items: center; gap: 10px; font-size: 24px;
-  font-weight: bold; color: black; text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
 }
-.logo img { height: 50px; }
-
+.logo img {
+  height: 50px;
+}
 .search-bar {
   display: flex;
   flex: 1;
@@ -32,23 +42,21 @@ body {
   max-width: 500px;
   background-color: white;
   border-radius: 20px;
-  overflow: hidden;
   border: 1px solid #5f5f5f;
 }
 .search-bar input {
   flex: 1;
   padding: 10px;
   border: none;
-  outline: none;
   font-size: 14px;
 }
 .search-btn {
   background: none;
   border: none;
   padding: 10px;
-  cursor: pointer;
   font-size: 18px;
   color: #00cc44;
+  cursor: pointer;
 }
 .acciones-usuario {
   display: flex;
@@ -72,7 +80,6 @@ body {
   background: linear-gradient(to bottom, #55dd55, #2baa2b);
   transform: scale(1.05);
 }
-.account span, .cart span { font-size: 14px; }
 
 /* Formulario */
 .login-box {
@@ -87,29 +94,40 @@ body {
 .login-box h2 {
   font-size: 24px;
   margin-bottom: 5px;
-  color: #000000;
+  color: #000;
 }
 .login-box h3 {
   font-size: 18px;
   margin-bottom: 20px;
-  color: #000000;
+  color: #000;
 }
+
 form {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   gap: 18px;
 }
 
 label {
   text-align: left;
   font-weight: bold;
-  margin-bottom: 5px;
   font-size: 14px;
   color: #2e2e2e;
+  margin-bottom: 4px;
 }
 
-input, select {
+.campo-icono {
+  position: relative;
+}
+.campo-icono input {
+  width: 100%;
+  padding: 12px 36px 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #b5d7b8;
+  font-size: 15px;
+  outline: none;
+}
+select {
   padding: 12px 14px;
   border-radius: 10px;
   border: 1px solid #b5d7b8;
@@ -119,16 +137,15 @@ input, select {
 }
 input:focus, select:focus {
   border-color: #31a64a;
-  box-shadow: 0 0 0 2px rgba(100, 255, 120, 0.2);
+  box-shadow: 0 0 0 2px rgba(49, 166, 74, 0.2);
 }
 
-/* Validación visual */
 .icono {
   position: absolute;
-  right: 15px;
-  top: 42px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 18px;
-  color: transparent;
 }
 input.valid + .icono::before {
   content: "✅";
@@ -139,23 +156,52 @@ input.invalid + .icono::before {
   color: #dc2626;
 }
 
-.error {
+.requisito {
   font-size: 12px;
-  color: #d0342c;
-  margin-top: 4px;
+  color: #555;
+  margin-top: 3px;
   text-align: left;
+  transition: 0.2s;
+}
+.requisito.valid {
+  color: #16a34a;
 }
 
-/* Botón */
+.password-requisitos {
+  background: #ebfbee;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: left;
+  margin-top: -10px;
+}
+.password-requisitos .requisito {
+  margin: 4px 0;
+  opacity: 0.7;
+}
+.password-requisitos .requisito.valid {
+  opacity: 1;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* Confirmación */
+.mensaje-confirmacion {
+  font-size: 14px;
+  font-weight: 500;
+}
+.mensaje-exito {
+  color: #2e7d32;
+}
 .login-btn {
   background-color: #31a64a;
   color: white;
   padding: 12px;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
   font-weight: bold;
   font-size: 15px;
+  cursor: pointer;
   transition: background-color 0.3s;
 }
 .login-btn:hover {
@@ -166,12 +212,32 @@ input.invalid + .icono::before {
   cursor: not-allowed;
 }
 
-/* Mensaje de confirmación */
-.mensaje-confirmacion {
-  margin-top: 12px;
-  font-size: 14px;
-  font-weight: 500;
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
 }
-.mensaje-exito {
-  color: #2e7d32;
+
+.campo-icono {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.campo-icono input {
+  flex: 1;
+  padding: 12px 36px 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #b5d7b8;
+  font-size: 15px;
+  outline: none;
+  width: 100%;
+}
+
+.icono {
+  position: absolute;
+  right: 12px;
+  font-size: 18px;
 }
